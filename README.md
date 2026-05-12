@@ -1,4 +1,10 @@
-# XLSB Data Converter Streamlit App
+# Data Converter WebApp v2
+
+## 변경 사항
+- 기존 전체 엑셀 파일 업로드는 선택 사항으로 변경
+- `Data` 시트에 들어갈 원본 데이터는 별도 업로드 가능
+- CSV / XLSX / XLSB 지원
+- 업로드 데이터 기준으로 변환, 그래프, 결과 다운로드 수행
 
 ## 실행 방법
 
@@ -7,20 +13,11 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## 기능
-
-- `.xlsb` 파일 업로드
-- `Data` 시트 원본 데이터 확인
-- `DataConverted`, `Graph` 시트 미리보기
-- 선택 채널 Python 변환
-- Bias 제거
-- 이동평균 필터
-- 그래프 표시
-- 변환 결과 Excel 다운로드
-
-## 다음 확장 예정
-
-- CFC 필터 Python 1:1 구현
-- 꼬리만들기 / 꼬리연결 로직 이식
-- Channel 시트 기반 자동 채널 매핑
-- Dashboard 지표 자동 생성
+## 사용 순서
+1. 선택 사항: 기존 Data Converter `.xlsb` 기준 파일 업로드
+2. 필수: Data 원본 파일 업로드
+3. 시간축 컬럼 선택
+4. 변환할 데이터 컬럼 선택
+5. Bias 제거 / 이동평균 필터 설정
+6. DataConverted 결과 확인
+7. 결과 Excel 다운로드
