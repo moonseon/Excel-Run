@@ -1,4 +1,4 @@
-# 엑셀 서식 기반 사칙연산 계산기
+# XLSB Data Converter Streamlit App
 
 ## 실행 방법
 
@@ -7,8 +7,20 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## 수정 내용
+## 기능
 
-- `st.session_state.values[...]` 접근 오류 수정
-- 각 입력값을 Streamlit 세션 키로 직접 관리
-- 초기화 버튼 안정화
+- `.xlsb` 파일 업로드
+- `Data` 시트 원본 데이터 확인
+- `DataConverted`, `Graph` 시트 미리보기
+- 선택 채널 Python 변환
+- Bias 제거
+- 이동평균 필터
+- 그래프 표시
+- 변환 결과 Excel 다운로드
+
+## 다음 확장 예정
+
+- CFC 필터 Python 1:1 구현
+- 꼬리만들기 / 꼬리연결 로직 이식
+- Channel 시트 기반 자동 채널 매핑
+- Dashboard 지표 자동 생성
