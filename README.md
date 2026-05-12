@@ -1,17 +1,14 @@
-# 엑셀 서식 기반 Python 웹앱
+# 엑셀 서식 기반 사칙연산 계산기
 
-업로드된 엑셀 계산기 구조를 Python Streamlit 웹앱으로 변환한 예제입니다.
-
-## 설치
+## 실행 방법
 
 ```bash
 pip install -r requirements.txt
-```
-
-## 실행
-
-```bash
 streamlit run app.py
 ```
 
-브라우저가 열리면 숫자를 입력해 사칙연산 결과를 바로 확인할 수 있습니다.
+## 수정 내용
+
+- `st.session_state.values[...]` 접근 오류 수정
+- 각 입력값을 Streamlit 세션 키로 직접 관리
+- 초기화 버튼 안정화
